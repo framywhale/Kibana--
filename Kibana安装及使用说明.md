@@ -16,6 +16,7 @@
    * `sudo apt-get update && sudo apt-get install kibana`
 
 3. 启动及关闭：
+
    * 启动：`sudo -i service kibana start`
    * 关闭：`sudo -i service kibana stop`
   
