@@ -26,10 +26,9 @@
 * `systemd`:    
   * 启动：`sudo systemctl start kibana.service`
   * 关闭：`sudo systemctl stop kibana.service`
-    
-    
-**PS:** Kibana运行在**5601**端口
+
 
 ## Kibana的使用
+**PS:** Kibana运行在**5601**端口
 请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
 
