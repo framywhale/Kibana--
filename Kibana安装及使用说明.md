@@ -16,8 +16,9 @@
    * `sudo apt-get update && sudo apt-get install kibana`
 
 3. 启动及关闭：
-  启动之前，需要首先在终端中输入如下命令，来确定你的系统使用的是SysV `init` 还是`systemd`：<br>
-  `ps -p 1` 
+  启动之前，需要首先在终端中输入如下命令，来确定你的系统使用的是 SysV init 还是 systemd ：<br>
+  `ps -p 1`
+  
   通过查看显示的`CMD`一栏：
     * 如果是`init` ，则启动和关闭使用如下命令：
       * 启动：`sudo -i service kibana start`
