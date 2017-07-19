@@ -14,5 +14,9 @@
    * `sudo apt-get install apt-transport-https`
    * `echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list`
    * `sudo apt-get update && sudo apt-get install kibana`
-3. 启动：
-   * 
+3. 启动及关闭：
+   * 启动：`sudo -i service kibana start`
+   * 关闭：`sudo -i service kibana stop`
+  
+## 将 Kibana连接至elasticsearch
+
