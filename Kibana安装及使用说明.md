@@ -9,10 +9,10 @@
 
 ### Ubuntu的apt-get安装
 1. **下载并安装**公共密钥：
-  * `wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -`
+   * `wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -`
 2. 从APT-repository**安装**：
-  * `sudo apt-get install apt-transport-https`
-  * `echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list`
-  * `sudo apt-get update && sudo apt-get install kibana`
+   * `sudo apt-get install apt-transport-https`
+   * `echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list`
+   * `sudo apt-get update && sudo apt-get install kibana`
 3. 启动：
-  * 
+   * 
