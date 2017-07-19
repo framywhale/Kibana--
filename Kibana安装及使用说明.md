@@ -26,7 +26,10 @@
     * 关闭：`sudo -i service kibana stop`
 
  *`systemd`:
-    * 启动：`sudo systemctl start kibana.service`
+    * 启动：
+    ``` Java    
+      sudo systemctl start kibana.service
+    ```
     * 关闭：`sudo systemctl stop kibana.service`
     
     
