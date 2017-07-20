@@ -80,7 +80,14 @@ curl -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare
 在终端中输入如下命令：
 `curl 'localhost:9200/_cat/indices?v' `
 你将看到类似下面的信息：
-
+``` javascript
+health status index               pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   bank                  5   1       1000            0    418.2kb        418.2kb
+yellow open   shakespeare           5   1     111396            0     17.6mb         17.6mb
+yellow open   logstash-2015.05.18   5   1       4631            0     15.6mb         15.6mb
+yellow open   logstash-2015.05.19   5   1       4624            0     15.7mb         15.7mb
+yellow open   logstash-2015.05.20   5   1       4750            0     16.4mb         16.4mb
+```
 关于如何在Kibana中构建索引以及Visualize操作的教程，见视频。
 
 请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
