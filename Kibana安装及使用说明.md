@@ -41,8 +41,8 @@
     "line_id": INT,  
     "play_name": "String",  
     "speech_number": INT,  
-    "line_number": "String",  
-    "speaker": "String",  
+    "line_number": "String",  
+    "speaker": "String",  
     "text_entry": "String",  
   } 
 ```
@@ -89,7 +89,7 @@ yellow open   logstash-2015.05.18   5   1       4631            0     15.6mb    
 yellow open   logstash-2015.05.19   5   1       4624            0     15.7mb         15.7mb
 yellow open   logstash-2015.05.20   5   1       4750            0     16.4mb         16.4mb
 ```
-关于如何在Kibana中构建索引以及Visualize操作的教程，见视频。
+关于如何在Kibana中**构建索引**以及**Visualize**和**Dashboard**的操作，请见[视频]()【还未上传】。
 
 请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
 
