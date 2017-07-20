@@ -31,9 +31,11 @@
 ## Kibana的使用
 **PS:** Kibana运行在**5601**端口
 ### 将数据导入Elasticsearch
-在导入`.json`数据集之前，我们需要为各个字段建立一个映射。映射把索引里的文档划分成逻辑组，指明字段的特征，如字段是否可被搜索、是否被标记、是否能被拆分成多个文字等。
-以`shakespeare.json`数据集为例：
-shakespeare数据集的组织格式为：
+在导入`.json`数据集之前，我们需要为各个字段建立一个**映射**。
+【映射把索引里的文档划分成逻辑组，指明字段的特征，如字段是否可被搜索、是否被标记、是否能被拆分成多个文字等】
+
+以`shakespeare.json`数据集为例，
+`shakespeare`数据集的组织格式为：
 ``` javascript
   {  
     "line_id": INT,  
@@ -44,6 +46,8 @@ shakespeare数据集的组织格式为：
     "text_entry": "String",  
   } 
 ```
+
+#### 1.构建映射：
 需要构建的映射为：
 [在终端中输入如下命令]
 ``` shell
@@ -62,5 +66,23 @@ curl -XPUT http://localhost:9200/shakespeare -d '  
 }  
 '; 
 ```
+以上映射意思为， `speaker`是一个类型为`string`的字段，`line_id`是一个类型为`整型`的字段，其余字段类似。
+
+#### 2. 使用Elasticsearch的批量导入**API**来输入数据
+``` shell
+# 导入data数据
+curl -XPOST 'localhost:9200/bank/account/_bulk?pretty' --data-binary @data.json  
+# 导入shakespeare数据
+curl -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare.json  
+```
+
+#### 3. 验证数据是否成功导入
+在终端中输入如下命令：
+`curl 'localhost:9200/_cat/indices?v' `
+你将看到类似下面的信息：
+
+关于如何在Kibana中构建索引以及Visualize操作的教程，见视频。
+
 请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
 
+以上文档参考了博客：[《Kibana的基本使用》](http://blog.csdn.net/ming_311/article/details/50619859)。
