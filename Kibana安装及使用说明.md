@@ -30,5 +30,37 @@
 
 ## Kibana的使用
 **PS:** Kibana运行在**5601**端口
+### 将数据导入Elasticsearch
+在导入`.json`数据集之前，我们需要为各个字段建立一个映射。映射把索引里的文档划分成逻辑组，指明字段的特征，如字段是否可被搜索、是否被标记、是否能被拆分成多个文字等。
+以`shakespeare.json`数据集为例：
+shakespeare数据集的组织格式为：
+``` javascript
+  {  
+    "line_id": INT,  
+    "play_name": "String",  
+    "speech_number": INT,  
+    "line_number": "String",  
+    "speaker": "String",  
+    "text_entry": "String",  
+  } 
+```
+需要构建的映射为：
+[在终端中输入如下命令]
+``` javascript
+curl -XPUT http://localhost:9200/shakespeare -d '  
+{  
+ "mappings" : {  
+  "_default_" : {  
+   "properties" : {  
+    "speaker" : {"type": "string", "index" : "not_analyzed" },  
+    "play_name" : {"type": "string", "index" : "not_analyzed" },  
+    "line_id" : { "type" : "integer" },  
+    "speech_number" : { "type" : "integer" }  
+   }  
+  }  
+ }  
+}  
+'; 
+```
 请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
 
