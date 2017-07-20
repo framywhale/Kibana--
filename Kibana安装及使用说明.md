@@ -79,6 +79,7 @@ curl -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare
 #### 3. 验证数据是否成功导入
 在终端中输入如下命令：
 `curl 'localhost:9200/_cat/indices?v' `
+
 你将看到类似下面的信息：
 ``` javascript
 health status index               pri rep docs.count docs.deleted store.size pri.store.size
