@@ -31,7 +31,9 @@
 ## Kibana的使用
 ### 如何打开Kinaba图形界面？
 **PS:** Kibana运行在**5601**端口
+
   打开浏览器，在地址端输入：`http://YourDomain:5601`
+  
   比如，一般使用的时候输入的本地端口：`http://localhost:5601`
 
 ### 将数据导入Elasticsearch
