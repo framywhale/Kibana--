@@ -46,8 +46,8 @@ shakespeare数据集的组织格式为：
 ```
 需要构建的映射为：
 [在终端中输入如下命令]
-``` javascript
-curl -XPUT http://localhost:9200/shakespeare -d '  
+``` shell
+curl -XPUT http://localhost:9200/shakespeare -d '  
 {  
  "mappings" : {  
   "_default_" : {  
