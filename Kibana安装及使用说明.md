@@ -110,6 +110,6 @@ yellow open   shakespeare           5   1     120111            0     16.0mb    
 
 关于如何在Kibana中**构建索引**以及**Visualize**和**Dashboard**的操作，请见[视频](https://pan.baidu.com/s/1pLOBxkn)。
 
-关于Kibana的更多使用详情，请参见Kibana的中文文档【点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)】。
+关于Kibana的更多使用详情，请参见Kibana的中文文档【[点击这里](https://kibana.logstash.es/content/kibana/v5/setup.html)】。
 
 以上文档参考了博客：[《Kibana的基本使用》](http://blog.csdn.net/ming_311/article/details/50619859)。
