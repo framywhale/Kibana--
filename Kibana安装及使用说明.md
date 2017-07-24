@@ -96,8 +96,11 @@ health status index               pri rep docs.count docs.deleted store.size pri
 yellow open   data                  5   1       1000            0    420.1kb        420.2kb
 yellow open   shakespeare           5   1     120111            0     16.0mb         18.9mb
 ```
+
+以上例子中使用的数据，在[这里](https://github.com/framywhale/Kibana--)。
+
 关于如何在Kibana中**构建索引**以及**Visualize**和**Dashboard**的操作，请见[视频](https://pan.baidu.com/s/1pLOBxkn)。
 
-请参见Kibana的中文文档，请点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)。
+关于Kibana的更多使用详情，请参见Kibana的中文文档【点击[这里](https://kibana.logstash.es/content/kibana/v5/setup.html)】。
 
 以上文档参考了博客：[《Kibana的基本使用》](http://blog.csdn.net/ming_311/article/details/50619859)。
