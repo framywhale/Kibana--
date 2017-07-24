@@ -72,9 +72,13 @@ curl -XPUT http://localhost:9200/shakespeare -d '  
 }  
 '; 
 ```
-以上映射意思为， `speaker`是一个类型为`string`的字段，`line_id`是一个类型为`整型`的字段，其余字段类似。
+**解释：**
+* `-XPUT`之后的链接中`/shakespeare`意为在`localhost`上建立一个名为`shakespeare`的索引；
+* `speaker`是一个类型为`string`的字段，`line_id`是一个类型为`整型`的字段，其余字段类似；
 
-#### 2. 使用Elasticsearch的批量导入**API**来输入数据
+#### 2. 使用Elasticsearch的批量导入**API接口**来输入数据
+API接口的使用格式如下：
+
 ``` shell
 # 导入data数据
 curl -XPOST 'localhost:9200/bank/account/_bulk?pretty' --data-binary @data.json  
@@ -89,11 +93,8 @@ curl -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare
 你将看到类似下面的信息：
 ``` javascript
 health status index               pri rep docs.count docs.deleted store.size pri.store.size
-yellow open   bank                  5   1       1000            0    418.2kb        418.2kb
-yellow open   shakespeare           5   1     111396            0     17.6mb         17.6mb
-yellow open   logstash-2015.05.18   5   1       4631            0     15.6mb         15.6mb
-yellow open   logstash-2015.05.19   5   1       4624            0     15.7mb         15.7mb
-yellow open   logstash-2015.05.20   5   1       4750            0     16.4mb         16.4mb
+yellow open   data                  5   1       1000            0    420.1kb        420.2kb
+yellow open   shakespeare           5   1     120111            0     16.0mb         18.9mb
 ```
 关于如何在Kibana中**构建索引**以及**Visualize**和**Dashboard**的操作，请见[视频](https://pan.baidu.com/s/1pLOBxkn)。
 
