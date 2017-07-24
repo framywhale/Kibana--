@@ -77,7 +77,7 @@ curl -XPUT http://localhost:9200/shakespeare -d '  
 * `speaker`是一个类型为`string`的字段，`line_id`是一个类型为`整型`的字段，其余字段类似；
 
 #### 2. 使用Elasticsearch的批量导入**API接口**来输入数据
-API接口的使用格式如下：
+**API接口**的使用格式如下：
 
 ``` shell
 # 导入data数据
