@@ -40,6 +40,8 @@
 在导入`.json`数据集之前，我们需要为各个字段建立一个**映射**。
 【映射把索引里的文档划分成逻辑组，指明字段的特征，如字段是否可被搜索、是否被标记、是否能被拆分成多个文字等】
 
+#### 1.构建映射：
+
 以`shakespeare.json`数据集为例，
 `shakespeare`数据集的组织格式为：
 ``` javascript
@@ -53,9 +55,8 @@
   } 
 ```
 
-#### 1.构建映射：
-需要构建的映射为：
-[在终端中输入如下命令]
+需要构建的映射为：[在终端中输入如下命令]
+
 ``` shell
 curl -XPUT http://localhost:9200/shakespeare -d '  
 {  
@@ -75,6 +76,7 @@ curl -XPUT http://localhost:9200/shakespeare -d '  
 **解释：**
 * `-XPUT`之后的链接中`/shakespeare`意为在`localhost`上建立一个名为`shakespeare`的索引；
 * `speaker`是一个类型为`string`的字段，`line_id`是一个类型为`整型`的字段，其余字段类似；
+* `properties`中的每一个字段，都对应`shakespeare`原始数据的字段；
 
 #### 2. 使用Elasticsearch的批量导入**API接口**来输入数据
 **API接口**的使用格式如下：
@@ -85,6 +87,13 @@ curl -XPOST 'localhost:9200/bank/account/_bulk?pretty' --data-binary @data.json 
 # 导入shakespeare数据
 curl -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare.json  
 ```
+
+解释：
+* 在`1.构建映射`后，我们才能将数据导入**建立好**的**索引**，如`shakespeare`。
+* `_bulk?pretty`是Elasticsearch提供的API接口
+* `@`之后接的是将要导入的数据文件
+* 注意：
+  * 必须要先正确建立索引，才能成功地将数据导入该索引；
 
 #### 3. 验证数据是否成功导入
 在终端中输入如下命令：
