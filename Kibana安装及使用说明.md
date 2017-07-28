@@ -27,6 +27,8 @@
   * 启动：`sudo systemctl start kibana.service`
   * 关闭：`sudo systemctl stop kibana.service`
 
+----------
+本次安装的操作系统环境为**Ubuntu 14.04 64bit**
 
 ## Kibana的使用
 ### 如何打开Kinaba图形界面？
