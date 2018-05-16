@@ -1,4 +1,6 @@
 # Kibana在Ubuntu下安装及简单的使用
+简短地介绍了Kibana在Linux下的安装及使用。
+`data.json`和`shakespeare.json`是以上文档中使用到的数据。
 
 ## 安装和启动
 参考至[elastic官网](https://www.elastic.co/guide/en/kibana/5.5/install.html)。
